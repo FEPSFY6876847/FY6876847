@@ -115,12 +115,11 @@
                 Center for Climate and Energy Solutions (2018). Hurricanes and Climate Change. [online] Center for Climate and Energy Solutions. Available at: <a href="https://www.c2es.org/content/hurricanes-and-climate-change/"> https://www.c2es.org/content/hurricanes-and-climate-change/ </a>
             </li>
         </ol>
-       <div id="word-counter">Loading word count...</div>
+           <div id="word-counter">Loading word count...</div>
 
     <script>
         // Function to count words in a paragraph
         function countWordsInParagraph(paragraph) {
-            // Trim spaces and split by spaces to count words
             const text = paragraph.trim();
             if (text === "") return 0;  // Return 0 if the paragraph is empty or contains only spaces
             return text.split(/\s+/).length;
@@ -129,6 +128,14 @@
         // Function to count words in all paragraphs with class 'margined'
         function updateWordCount() {
             const paragraphs = document.querySelectorAll('p.margined');  // Select all paragraphs with class 'margined'
+
+            console.log('Paragraphs found: ', paragraphs.length);  // Debugging: log number of paragraphs found
+
+            if (paragraphs.length === 0) {
+                console.log('No paragraphs found with class "margined".');
+                return;
+            }
+
             let totalWords = 0;
 
             // Loop through paragraphs and count words
