@@ -115,32 +115,31 @@
                 Center for Climate and Energy Solutions (2018). Hurricanes and Climate Change. [online] Center for Climate and Energy Solutions. Available at: <a href="https://www.c2es.org/content/hurricanes-and-climate-change/"> https://www.c2es.org/content/hurricanes-and-climate-change/ </a>
             </li>
         </ol>
-<div>
-        <p>Total word count in paragraphs: <span id="word-count">0</span></p>
-    </div>
+    <div id="word-counter"></div>
 
     <script>
-        function countWordsInParagraphs() {
-            // Get all paragraph elements
-            const paragraphs = document.querySelectorAll('p');
-            let totalWordCount = 0;
-
-            // Iterate through each paragraph
-            paragraphs.forEach(paragraph => {
-                // Get the text content of the paragraph
-                const text = paragraph.innerText || paragraph.textContent;
-
-                // Split the text into words using space as delimiter and count them
-                const words = text.trim().split(/\s+/);
-                totalWordCount += words.length;
-            });
-
-            // Update the word count display
-            document.getElementById('word-count').textContent = totalWordCount;
+        // Function to count words in a paragraph
+        function countWordsInParagraph(paragraph) {
+            // Trim spaces and split by spaces to count words
+            return paragraph.trim().split(/\s+/).length;
         }
 
-        // Call the function to count words when the page loads
-        window.onload = countWordsInParagraphs;
+        // Function to count words in all paragraphs with class 'margined'
+        function updateWordCount() {
+            const paragraphs = document.querySelectorAll('p.margined');  // Select all paragraphs with class 'margined'
+            let totalWords = 0;
+
+            // Loop through paragraphs and count words
+            paragraphs.forEach((para) => {
+                totalWords += countWordsInParagraph(para.innerText);
+            });
+
+            // Display the total word count
+            document.getElementById('word-counter').innerText = `Total word count: ${totalWords}`;
+        }
+
+        // Update word count on page load
+        window.onload = updateWordCount;
     </script>
    
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
