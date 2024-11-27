@@ -115,10 +115,33 @@
                 Center for Climate and Energy Solutions (2018). Hurricanes and Climate Change. [online] Center for Climate and Energy Solutions. Available at: <a href="https://www.c2es.org/content/hurricanes-and-climate-change/"> https://www.c2es.org/content/hurricanes-and-climate-change/ </a>
             </li>
         </ol>
+<div>
+        <p>Total word count in paragraphs: <span id="word-count">0</span></p>
+    </div>
 
-        <div>
-            Word Count Is: <span></span>
-        </div>
+    <script>
+        function countWordsInParagraphs() {
+            // Get all paragraph elements
+            const paragraphs = document.querySelectorAll('p');
+            let totalWordCount = 0;
+
+            // Iterate through each paragraph
+            paragraphs.forEach(paragraph => {
+                // Get the text content of the paragraph
+                const text = paragraph.innerText || paragraph.textContent;
+
+                // Split the text into words using space as delimiter and count them
+                const words = text.trim().split(/\s+/);
+                totalWordCount += words.length;
+            });
+
+            // Update the word count display
+            document.getElementById('word-count').textContent = totalWordCount;
+        }
+
+        // Call the function to count words when the page loads
+        window.onload = countWordsInParagraphs;
+    </script>
    
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
@@ -168,14 +191,5 @@
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
-        function getWordCounts(nodeList) {
-    var wordCount = 0;
-    for ( var i = 0; i < nodeList.length; i++ ) {
-        wordCount += nodeList[i].textContent.trim().split(' ').length;
-    }
-    return wordCount;
-}
-
-document.querySelector('span').textContent = getWordCounts(document.querySelectorAll('p'));
 </body>
 </html>
