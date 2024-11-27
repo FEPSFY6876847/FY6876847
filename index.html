@@ -26,7 +26,9 @@
             Abstract
         </h3>
         <p class="margined">
+            <pre id=Introduction_InText">
             Hurricanes are upon the worst natural disasters that a country can face, they typically happen where sea temperatures are higher, Florida is the place where the most amount of hurricanes happen per year with a total of 120 hurricanes from 1851 to 2022 [15]. Hurricane Katrina caused a total of $200 Billion of damages [4] where Milton has only caused $50 Billion as of now as it is such a recent hurricane [5]. Katrina killed over 1500 people over the states of Louisiana, Mississippi, and Florida where Milton so far has only caused 10-20+ deaths according to multiple news sources [7]. Katrina reached a low 902mb of pressure, 7th lowest in us history, where Milton has reached a low of 897mb, 5th in us history [9]. Overall, on paper Milton was stronger than Katrina, but due to the US learning their lesson with Katrina they prepared for Milton, resulting in a better outcome than in the past.
+            </pre>
         </p>
         <h3 class="indented">
             Introduciton
@@ -51,6 +53,7 @@
             Conclusion
         </h3>
         <p class="margined">
+            <pre id="Conclusion_InText">
             Overall, looking at the figures and statistics, it shows that Milton, on paper, was stronger and if you take just the hurricane itself, no damages or deaths, Milton was stronger and looked like it was going to cause more damage. However this wasn’t the case, in fact Katrina still stands as the worst hurricane to hit the US in terms of cost [4]. Most the damage from Milton came from the high windspeeds rather than the flooding. Even though top scientists in the US feared the flooding most. This could be down to the US improving measures against hurricanes and improving the evacuation policies for major cities [16]. And even weeks after the Hurricane, not many people are talking about it, where with Katrina, everyone was talking about it, even now, years later. Clearly Katrina hit the US harder and with more panic than Milton did. 
         </p>
         <p class='margined'>
@@ -58,6 +61,7 @@
         </p>
         <p class='margined'>
             The contrasting outcomes of these two hurricanes highlight the effectiveness of new hurricane measures, from the preparation to the response and evacuation protocols in the US, are the main reasons for the mitigation of Milton’s worst potential impact. Nonetheless, Katrina’s destruction and impact it had on America, is still being felt today, from politics, society and disaster management. The lessons from Katrina have shaped the path for future hurricane response, but the legacy of Katrina will always be remembered and constantly being learnt upon.
+            </pre>
         </p>
         <h4 class="indented">
             Reference List
@@ -188,9 +192,9 @@
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
