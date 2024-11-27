@@ -115,7 +115,7 @@
                 Center for Climate and Energy Solutions (2018). Hurricanes and Climate Change. [online] Center for Climate and Energy Solutions. Available at: <a href="https://www.c2es.org/content/hurricanes-and-climate-change/"> https://www.c2es.org/content/hurricanes-and-climate-change/ </a>
             </li>
         </ol>
-    <div id="word-counter"></div>
+       <div id="word-counter"></div>
 
     <script>
         // Function to count words in a paragraph
@@ -139,7 +139,9 @@
         }
 
         // Update word count on page load
-        window.onload = updateWordCount;
+        window.onload = function() {
+            updateWordCount();  // Call the function to update word count
+        };
     </script>
    
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
