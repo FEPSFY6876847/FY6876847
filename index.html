@@ -27,7 +27,7 @@
         <h3 class="indented">
             Abstract
         </h3>
-        <p id="Abstract1" class="margined">
+        <p class="margined">
             Hurricanes are upon the worst natural disasters that a country can face, they typically happen where sea temperatures are higher, Florida is the place where the most amount of hurricanes happen per year with a total of 120 hurricanes from 1851 to 2022 <a href="https://rainbowrestores.com/blog/where-are-hurricanes-most-likely-to-do-the-most-damage"> (Rainbowrestores.com. 2024)</a>. Hurricane Katrina caused a total of $200 Billion of damages <a href="https://www.ncei.noaa.gov/access/billions/."> (National Centers for Environmental Information. 2024)</a> where Milton has only caused $50 Billion as of now as it is such a recent hurricane <a href="https://www.theguardian.com/us-news/2024/oct/11/florida-in-hurricane-milton-damage"> (Helmore, E. and Betts, A. 2024)</a>. Katrina killed over 1500 people over the states of Louisiana, Mississippi, and Florida where Milton so far has only caused 10-20+ deaths according to multiple news sources <a href="https://reliefweb.int/map/united-states-america/united-states-hurricane-katrina-situation-map"> (ReliefWeb. n.d.)</a>. Katrina reached a low 902mb of pressure, 7th lowest in us history, where Milton has reached a low of 897mb, 5th in us history <a href="https://en.cibercuba.com/noticias/2024-10-08-u1-e207888-s27061-nid289782-record-milton-quinto-huracan-baja-presion-registrado#google_vignette"> (Team, C.E. 2024)</a>. Overall, on paper Milton was stronger than Katrina, but due to the US learning their lesson with Katrina they prepared for Milton, resulting in a better outcome than in the past.
         </p>
         <h3 class="indented">
@@ -191,7 +191,6 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const AbstractCount = displayWordCount("Abstract1");
     const IntroductionCount1 = displayWordCount("Introduction1");
     const IntroductionCount2 = displayWordCount("Introduction2");
     const MainCount1 = displayWordCount("Main1");
@@ -200,7 +199,7 @@
     const ConclusionCount2 = displayWordCount("Conclusion2");
     const ConclusionCount3 = displayWordCount("Conclusion3");
     // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount1 + IntroductionCount2 + MainCount1 + MainCount2 + ConclusionCount1 + ConclusionCount2 + ConclusionCount3;
+    const totalWordCount = IntroductionCount1 + IntroductionCount2 + MainCount1 + MainCount2 + ConclusionCount1 + ConclusionCount2 + ConclusionCount3;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
